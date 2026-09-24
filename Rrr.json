@@ -1,0 +1,21 @@
+{
+  "short_name": "SafeResponse",
+  "name": "SafeResponse Uganda",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1033/1033069.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1033/1033069.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./RRR.html",
+  "background_color": "#0b1528",
+  "theme_color": "#0b1528",
+  "display": "standalone",
+  "orientation": "portrait"
+}
