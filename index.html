@@ -15,6 +15,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="RRR.css" />
+  <!-- Leaflet Map CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
 </head>
 <body>
 
@@ -214,31 +217,9 @@
 
       <!-- Right Column: Map Preview -->
       <div class="map-container">
-        <div class="map-mockup">
-          <div class="map-location label-kawempe">Kawempe</div>
-          <div class="map-location label-kampala">Kampala</div>
-          <div class="map-location label-namanve">Namanve</div>
-          <div class="map-location label-mengo">Mengo</div>
-          <div class="map-location label-makindye">Makindye</div>
-          <div class="map-location label-entebbe">Entebbe</div>
+  <div id="map"></div>
+</div>
 
-          <!-- Pins -->
-          <div class="map-pin pin-red" style="top: 25%; left: 69%;"><i class="fa-solid fa-fire"></i></div>
-          <div class="map-pin pin-orange" style="top: 27%; left: 77%;"><i class="fa-solid fa-car-burst"></i></div>
-          <div class="map-pin pin-yellow" style="top: 48%; left: 65%;"><i class="fa-solid fa-triangle-exclamation"></i></div>
-          <div class="map-pin pin-blue" style="top: 52%; left: 70%;"><i class="fa-solid fa-plus"></i></div>
-          <div class="map-pin pin-purple" style="top: 50%; left: 79%;"><i class="fa-solid fa-shield-halved"></i></div>
-          <div class="map-pin pin-red" style="top: 42%; left: 85%;"><i class="fa-solid fa-car-burst"></i></div>
-
-          <!-- Controls -->
-          <div class="map-controls">
-            <button><i class="fa-solid fa-plus"></i></button>
-            <button><i class="fa-solid fa-minus"></i></button>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </section>
 
   <!-- Stats Banner Footer -->
@@ -276,7 +257,8 @@
 
     </div>
   </footer>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
   <script src="RRR.js"></script>
 </body>
 </html>
