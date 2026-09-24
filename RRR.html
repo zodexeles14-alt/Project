@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeResponse Uganda</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="RRR.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span class="exclamation">!</span>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">SafeResponse</span>
+          <span class="brand-sub">UGANDA</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Report Emergency</a></li>
+        <li><a href="#">Incidents</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="nav-auth">
+        <a href="#" class="btn-login"><i class="fa-solid fa-user"></i> Login</a>
+        <a href="#" class="btn-signup">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-container">
+      
+      <!-- Hero Left Content -->
+      <div class="hero-text-content">
+        <div class="subtitle">FASTER ALERTS • QUICKER RESPONSE • SAFER COMMUNITIES</div>
+        <h1>A Safer Uganda<br><span class="highlight">Starts With You</span></h1>
+        <p>Report emergencies, get real-time alerts, and help build safer communities across Uganda.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn-primary">
+            <i class="fa-solid fa-triangle-exclamation"></i> Report an Emergency <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#" class="btn-secondary">
+            <i class="fa-solid fa-map-location-dot"></i> View Incidents
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Right Form (Quick Emergency Report) -->
+      <div class="report-card">
+        <div class="card-header">
+          <i class="fa-solid fa-circle-exclamation card-alert-icon"></i>
+          <h3>Quick Emergency Report</h3>
+        </div>
+        <p class="card-sub">What type of emergency is it?</p>
+
+        <div class="emergency-grid">
+          <button class="emergency-btn active" data-type="Fire">
+            <i class="fa-solid fa-fire"></i>
+            <span>Fire</span>
+          </button>
+          <button class="emergency-btn" data-type="Road Accident">
+            <i class="fa-solid fa-car-burst"></i>
+            <span>Road Accident</span>
+          </button>
+          <button class="emergency-btn" data-type="Flood">
+            <i class="fa-solid fa-water"></i>
+            <span>Flood</span>
+          </button>
+          <button class="emergency-btn" data-type="Medical">
+            <i class="fa-solid fa-kit-medical"></i>
+            <span>Medical</span>
+          </button>
+          <button class="emergency-btn" data-type="Electrical Hazard">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Electrical Hazard</span>
+          </button>
+          <button class="emergency-btn" data-type="Building Collapse">
+            <i class="fa-solid fa-building-circle-xmark"></i>
+            <span>Building Collapse</span>
+          </button>
+          <button class="emergency-btn" data-type="Missing Person">
+            <i class="fa-solid fa-user-slash"></i>
+            <span>Missing Person</span>
+          </button>
+          <button class="emergency-btn" data-type="Other">
+            <i class="fa-solid fa-ellipsis"></i>
+            <span>Other</span>
+          </button>
+        </div>
+
+        <!-- GPS Location Section -->
+        <div class="gps-container">
+          <button type="button" id="getGpsBtn" class="btn-gps">
+            <i class="fa-solid fa-location-crosshairs"></i> Get Current Location
+          </button>
+          <p id="gpsStatus" class="gps-status">Location not captured yet.</p>
+        </div>
+
+        <button class="btn-submit-emergency" id="submitEmergencyBtn">
+          <i class="fa-solid fa-circle-exclamation"></i> Report Now
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Features Cards Section -->
+  <section class="features-section">
+    <div class="features-container">
+      
+      <div class="feature-card">
+        <div class="feature-icon icon-red">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <h3>Real-Time Alerts</h3>
+        <p>Get instant notifications about emergencies near you.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon icon-blue">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <h3>GPS Tracking</h3>
+        <p>Share your location and help responders find you faster.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon icon-green">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3>Community Powered</h3>
+        <p>Together we can make Uganda safer.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon icon-purple">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Verified Responders</h3>
+        <p>Trained and trusted emergency teams at your service.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Active Incidents & Map Section -->
+  <section class="incidents-section">
+    <div class="incidents-container">
+      
+      <!-- Left Column: Active Incidents List -->
+      <div class="incidents-left">
+        <div class="section-title-bar">
+          <h2><span class="live-dot"></span> Active Incidents Near You</h2>
+          <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="cards-wrapper">
+          <!-- Card 1 -->
+          <div class="incident-card">
+            <span class="badge badge-high">High</span>
+            <div class="incident-info">
+              <h4><i class="fa-solid fa-car-burst"></i> Road Accident</h4>
+              <p><i class="fa-solid fa-location-dot"></i> Kampala - Ntinda</p>
+              <span class="time-ago"><i class="fa-regular fa-clock"></i> 2 minutes ago</span>
+            </div>
+            <a href="#" class="btn-card-action"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="incident-card">
+            <span class="badge badge-medium">Medium</span>
+            <div class="incident-info">
+              <h4><i class="fa-solid fa-water"></i> Flooding</h4>
+              <p><i class="fa-solid fa-location-dot"></i> Kampala - Nakawa</p>
+              <span class="time-ago"><i class="fa-regular fa-clock"></i> 12 minutes ago</span>
+            </div>
+            <a href="#" class="btn-card-action"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="incident-card">
+            <span class="badge badge-critical">Critical</span>
+            <div class="incident-info">
+              <h4><i class="fa-solid fa-fire"></i> Fire Outbreak</h4>
+              <p><i class="fa-solid fa-location-dot"></i> Kampala - Industrial Area</p>
+              <span class="time-ago"><i class="fa-regular fa-clock"></i> 25 minutes ago</span>
+            </div>
+            <a href="#" class="btn-card-action"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Map Preview -->
+      <div class="map-container">
+        <div class="map-mockup">
+          <div class="map-location label-kawempe">Kawempe</div>
+          <div class="map-location label-kampala">Kampala</div>
+          <div class="map-location label-namanve">Namanve</div>
+          <div class="map-location label-mengo">Mengo</div>
+          <div class="map-location label-makindye">Makindye</div>
+          <div class="map-location label-entebbe">Entebbe</div>
+
+          <!-- Pins -->
+          <div class="map-pin pin-red" style="top: 25%; left: 69%;"><i class="fa-solid fa-fire"></i></div>
+          <div class="map-pin pin-orange" style="top: 27%; left: 77%;"><i class="fa-solid fa-car-burst"></i></div>
+          <div class="map-pin pin-yellow" style="top: 48%; left: 65%;"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div class="map-pin pin-blue" style="top: 52%; left: 70%;"><i class="fa-solid fa-plus"></i></div>
+          <div class="map-pin pin-purple" style="top: 50%; left: 79%;"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="map-pin pin-red" style="top: 42%; left: 85%;"><i class="fa-solid fa-car-burst"></i></div>
+
+          <!-- Controls -->
+          <div class="map-controls">
+            <button><i class="fa-solid fa-plus"></i></button>
+            <button><i class="fa-solid fa-minus"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stats Banner Footer -->
+  <footer class="stats-banner">
+    <div class="stats-container">
+      
+      <div class="stat-item">
+        <i class="fa-solid fa-users icon-stat"></i>
+        <div>
+          <h3>2,845</h3>
+          <p>Total Reports</p>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <i class="fa-solid fa-circle-check icon-stat icon-blue-stat"></i>
+        <div>
+          <h3>1,284</h3>
+          <p>Resolved Incidents</p>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <i class="fa-solid fa-user-group icon-stat"></i>
+        <div>
+          <h3>346</h3>
+          <p>Verified Responders</p>
+        </div>
+      </div>
+
+      <div class="stat-item brand-tag">
+        <i class="fa-solid fa-shield-halved icon-stat icon-blue-stat"></i>
+        <p class="tagline">Together for a<br><strong>Safer Uganda</strong></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="RRR.js"></script>
+</body>
+</html>
