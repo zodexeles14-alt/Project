@@ -83,14 +83,12 @@ if ('serviceWorker' in navigator) {
 // Initialize interactive map centered on Kampala
 const map = L.map('map').setView([0.3476, 32.5825], 12);
 
-// Add dark-mode map layers (Free, no API key needed)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; OpenStreetMap &copy; CARTO',
-  subdomains: 'abcd',
-  maxZoom: 19
+// map
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+  maxZoom: 16
 }).addTo(map);
 
-// Add sample incident pins to the map
 const incidents = [
   { title: "Road Accident", lat: 0.355, lng: 32.610, info: "High (Ntinda)" },
   { title: "Flooding", lat: 0.332, lng: 32.602, info: "Medium (Nakawa)" },
