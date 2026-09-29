@@ -1,7 +1,7 @@
 const CACHE_NAME = 'saferesponse-v1';
 const ASSETS_TO_CACHE = [
   './',
-  './RRR.html',
+  './index.html',
   './RRR.css',
   './RRR.js',
   './manifest.json'
