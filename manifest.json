@@ -5,8 +5,9 @@
     {
       "src": "logo.png",
       "sizes": "512x512",
-      "type": "image/png"
-    }
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
   ],
   "start_url": "./index.html",
   "background_color": "#0b1528",
