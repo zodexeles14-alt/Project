@@ -1,11 +1,13 @@
 const CACHE_NAME = 'saferesponse-v1';
 const ASSETS_TO_CACHE = [
-  './',
-  './index.html',
-  './RRR.css',
-  './RRR.js',
-  './manifest.json'
+  '/Project/',
+  '/Project/index.html',
+  '/Project/RRR.css',
+  '/Project/RRR.js',
+  '/Project/manifest.json',
+  '/Project/logo.png'
 ];
+
 
 // Install Event - Cache Files
 self.addEventListener('install', (event) => {
