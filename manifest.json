@@ -1,12 +1,13 @@
 {
   "short_name": "SafeResponse",
   "name": "SafeResponse Uganda",
-  "icons": [
+    "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/1033/1033069.png",
-      "sizes": "192x192",
+      "src": "logo.png",
+      "sizes": "512x512",
       "type": "image/png"
-    },
+    }
+    ]
     {
       "src": "https://cdn-icons-png.flaticon.com/512/1033/1033069.png",
       "sizes": "512x512",
