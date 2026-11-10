@@ -168,7 +168,29 @@
 
     </div>
   </section>
+<!-- Emergency Report Form -->
+<form id="emergencyReportForm">
+  <!-- Category selection buttons or radio inputs -->
+  <input type="hidden" id="selectedCategory" value="Fire">
+  
+  <!-- Location status -->
+  <button type="button" id="getLocationBtn">Get Current Location</button>
+  <span id="locationStatus">Location not captured yet.</span>
+  <input type="hidden" id="latitude">
+  <input type="hidden" id="longitude">
 
+  <!-- Submit Button -->
+  <button type="submit" id="reportNowBtn">Report Now</button>
+</form>
+
+<!-- Leaflet Map Container -->
+<div id="map" style="height: 400px;"></div>
+
+<!-- Incidents Section List -->
+<div id="incidentsContainer">
+  <!-- Dynamic incident cards will be injected here -->
+</div>
+  
   <!-- Active Incidents & Map Section -->
   <section class="incidents-section">
     <div class="incidents-container">
