@@ -587,6 +587,28 @@ body {
   align-items: center;
 }
 
+/* Make Feature Cards Match the Dark Theme Aesthetic */
+.feature-card {
+    background: #121f30 !important; /* Rich dark blue-black background */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card h3 {
+    color: #ffffff !important;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.feature-card p {
+    color: #94a3b8 !important; /* Soft muted text color */
+    font-size: 14px;
+}
+
+
 .stat-item {
   display: flex;
   align-items: center;
