@@ -110,14 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Layer group to manage map markers cleanly
     const markersLayer = L.layerGroup().addTo(map);
 
-    function loadAndDisplayIncidents() {
+        function loadAndDisplayIncidents() {
         markersLayer.clearLayers();
+        const cardsWrapper = document.querySelector('.cards-wrapper');
 
         // Default sample incidents
         const defaultIncidents = [
-            { title: "Road Accident", lat: 0.355, lng: 32.613, info: "High (Ntinda)", time: "2 minutes ago" },
-            { title: "Flooding", lat: 0.332, lng: 32.602, info: "Medium (Nakawa)", time: "12 minutes ago" },
-            { title: "Fire Outbreak", lat: 0.315, lng: 32.598, info: "Critical (Industrial Area)", time: "25 minutes ago" }
+            { title: "Road Accident", lat: 0.355, lng: 32.613, info: "Kampala - Ntinda", severity: "badge-high", severityText: "High", time: "2 minutes ago", icon: "fa-car-burst" },
+            { title: "Flooding", lat: 0.332, lng: 32.602, info: "Kampala - Nakawa", severity: "badge-medium", severityText: "Medium", time: "12 minutes ago", icon: "fa-water" },
+            { title: "Fire Outbreak", lat: 0.315, lng: 32.598, info: "Kampala - Industrial Area", severity: "badge-critical", severityText: "Critical", time: "25 minutes ago", icon: "fa-fire" }
         ];
 
         // Retrieve user-submitted incidents from localStorage
@@ -128,11 +129,35 @@ document.addEventListener('DOMContentLoaded', () => {
             title: inc.category,
             lat: inc.lat,
             lng: inc.lng,
-            info: inc.info,
-            time: inc.time
+            info: `GPS Report (${inc.lat.toFixed(4)}, ${inc.lng.toFixed(4)})`,
+            severity: "badge-critical",
+            severityText: "Active",
+            time: inc.time,
+            icon: "fa-triangle-exclamation"
         }));
 
+        // Combine user reports at the top, followed by defaults
         const allIncidents = [...formattedUserIncidents, ...defaultIncidents];
+
+        // Rebuild the incident cards feed dynamically in the HTML DOM
+        if (cardsWrapper) {
+            cardsWrapper.innerHTML = ''; // Clear container to prevent duplication
+            
+            allIncidents.forEach(item => {
+                const cardHTML = document.createElement('div');
+                cardHTML.className = 'incident-card';
+                cardHTML.innerHTML = `
+                    <span class="badge ${item.severity}">${item.severityText}</span>
+                    <div class="incident-info">
+                        <h4><i class="fa-solid ${item.icon}"></i> ${item.title}</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> ${item.info}</p>
+                        <span class="time-ago"><i class="fa-regular fa-clock"></i> ${item.time}</span>
+                    </div>
+                    <a href="#" class="btn-card-action"><i class="fa-solid fa-arrow-right"></i></a>
+                `;
+                cardsWrapper.appendChild(cardHTML);
+            });
+        }
 
         // Render markers on the Leaflet map
         allIncidents.forEach(item => {
@@ -140,9 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 .bindPopup(`<h4>${item.title}</h4><p>${item.info}</p><small>${item.time}</small>`);
             markersLayer.addLayer(marker);
         });
-    }
-
-    // Initial load call
-    loadAndDisplayIncidents();
-});
+                              }
+                                 
       
