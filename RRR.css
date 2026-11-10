@@ -1,468 +1,467 @@
-/* --- Global Styles --- */
+/* ==========================================
+   SAFE-RESPONSE UGANDA - MASTER STYLESHEET
+   ========================================== */
+
+/* 1. Global Reset & Core Styling */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: #0b1528;
-  color: #ffffff;
-  overflow-x: hidden;
+    background-color: #0b1523;
+    color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.5;
 }
 
-/* --- Navigation Bar --- */
+/* 2. Navigation Bar */
 .navbar {
-  backdrop-filter: blur(8px);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(11, 21, 35, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
 }
 
 .logo-icon {
-  position: relative;
-  background: #2563eb;
-  color: #fff;
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
+    position: relative;
+    background: #2563eb;
+    color: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
-.logo-icon .exclamation {
-  position: absolute;
-  font-weight: 800;
-  font-size: 14px;
-  color: #ef4444;
+.logo-icon .fa-exclamation {
+    position: absolute;
+    font-size: 10px;
+    color: #ef4444;
 }
 
 .logo-text {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .brand-name {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.1;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.1;
 }
 
 .brand-sub {
-  color: #94a3b8;
-  font-size: 10px;
-  letter-spacing: 2px;
+    color: #38bdf8;
+    font-size: 10px;
+    letter-spacing: 2px;
 }
 
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 32px;
+    display: flex;
+    list-style: none;
+    gap: 32px;
 }
 
 .nav-links a {
-  color: #cbd5e1;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: color 0.2s ease;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #38bdf8;
-  border-bottom: 2px solid #38bdf8;
-  padding-bottom: 4px;
+    color: #38bdf8;
 }
 
 .nav-auth {
-  display: flex;
-  gap: 12px;
-  align-items: center;
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
 
 .btn-login {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-signup {
-  background: #2563eb;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 8px 20px;
-  border-radius: 20px;
-  transition: background 0.2s;
+    background: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background 0.2s;
 }
 
 .btn-signup:hover {
-  background: #1d4ed8;
+    background: #1d4ed8;
 }
 
-/* --- Hero Section --- */
+/* 3. Hero Section */
 .hero {
-  position: relative;
-  min-height: 100vh;
-  padding-top: 100px;
-  padding-bottom: 60px;
-  background: url(main.png) center/cover no-repeat;
-  display: flex;
-  align-items: center;
+    position: relative;
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: linear-gradient(180deg, rgba(11, 21, 35, 0.4) 0%, #0b1523 100%), url('main.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
 }
 
 .hero-container {
-  position: relative;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
-  align-items: center;
-  width: 100%;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
 }
 
 .subtitle {
-  color: #cbd5e1;
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: 700;
-  margin-bottom: 16px;
+    color: #38bdf8;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 16px;
 }
 
 .hero-text-content h1 {
-  font-size: 52px;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
 }
 
 .hero-text-content h1 .highlight {
-  color: #38bdf8;
+    color: #38bdf8;
 }
 
 .hero-text-content p {
-  color: #94a3b8;
-  font-size: 16px;
-  max-width: 480px;
-  margin-bottom: 32px;
-  line-height: 1.6;
-}
- .hero-text-content{
- padding: 30px;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(11, 21, 40, 0.85) 0%, rgba(11, 21, 40, 0.95) 100%);
-  border-radius: 30px;
-  height: 430px;
+    color: #94a3b8;
+    font-size: 16px;
+    max-width: 480px;
+    margin-bottom: 32px;
+    line-height: 1.6;
 }
 
 .hero-buttons {
-  display: flex;
-  gap: 16px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .btn-primary {
-  background: #2563eb;
-  color: white;
-  padding: 14px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+    background: #2563eb;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .btn-secondary {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  padding: 14px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
 }
 
-/* --- Quick Report Card --- */
-.report-card {
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+/* 4. Quick Report Card Form */
+.raport-card {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .card-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
 }
 
 .card-alert-icon {
-  color: #ef4444;
-  font-size: 20px;
+    color: #ef4444;
+    font-size: 20px;
 }
 
 .card-header h3 {
-  font-size: 18px;
-  font-weight: 700;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .card-sub {
-  color: #94a3b8;
-  font-size: 13px;
-  margin-bottom: 20px;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 20px;
 }
 
 .emergency-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
 }
 
 .emergency-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  padding: 16px 8px;
-  color: #94a3b8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 12px 8px;
+    color: #94a3b8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .emergency-btn i {
-  font-size: 20px;
-  color: #38bdf8;
+    font-size: 20px;
+    color: #38bdf8;
 }
 
 .emergency-btn span {
-  font-size: 11px;
-  font-weight: 600;
-  text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .emergency-btn:hover,
 .emergency-btn.active {
-  background: rgba(56, 189, 248, 0.1);
-  border-color: #38bdf8;
-  color: #ffffff;
+    background: rgba(56, 189, 248, 0.15);
+    border-color: #38bdf8;
+    color: #ffffff;
 }
 
-/* --- GPS Styling --- */
 .gps-container {
-  margin-bottom: 16px;
-  text-align: center;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .btn-gps {
-  width: 100%;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px dashed #38bdf8;
-  color: #38bdf8;
-  padding: 10px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: all 0.2s ease;
-}
-
-.btn-gps:hover {
-  background: #38bdf8;
-  color: #0b1528;
+    width: 100%;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px dashed #38bdf8;
+    color: #38bdf8;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .gps-status {
-  font-size: 12px;
-  color: #94a3b8;
-  margin-top: 6px;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 6px;
 }
 
 .btn-submit-emergency {
-  width: 100%;
-  background: #ef4444;
-  color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  transition: background 0.2s;
+    width: 100%;
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
 }
 
 .btn-submit-emergency:hover {
-  background: #dc2626;
+    background: #dc2626;
 }
 
-/* --- Features Section --- */
+/* 5. Features Section */
 .features-section {
-  background-color: #f8fafc;
-  padding: 40px 0;
+    background: #0d1b2a;
+    padding: 60px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .features-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .feature-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    background: #122135;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .feature-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  margin-bottom: 16px;
-  color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: white;
 }
 
 .icon-red { background: #ef4444; }
-.icon-blue { background: #3b82f6; }
+.icon-blue { background: #38bdf8; }
 .icon-green { background: #10b981; }
 .icon-purple { background: #8b5cf6; }
 
 .feature-card h3 {
-  color: #0f172a;
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
 .feature-card p {
-  color: #64748b;
-  font-size: 13px;
-  line-height: 1.5;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-/* --- Incidents & Map Section --- */
+/* 6. Active Incidents & Map Section */
 .incidents-section {
-  padding: 60px 0;
-  background: #0b1528;
+    padding: 60px 0;
+    background: #0b1523;
 }
 
 .incidents-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
 }
 
 .section-title-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
 }
 
 .section-title-bar h2 {
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .live-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #ef4444;
-  border-radius: 50%;
-  display: inline-block;
-  box-shadow: 0 0 8px #ef4444;
+    width: 10px;
+    height: 10px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #ef4444;
 }
 
 .view-all {
-  color: #38bdf8;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .cards-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .incident-card {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 16px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 18px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .badge {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  padding: 2px 10px;
-  border-radius: 12px;
-  font-size: 11px;
-  font-weight: 700;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
 }
 
 .badge-high { background: #ef4444; color: white; }
@@ -470,266 +469,161 @@ body {
 .badge-critical { background: #dc2626; color: white; }
 
 .incident-info {
-  margin-top: 24px;
+    margin-top: 20px;
 }
 
 .incident-info h4 {
-  font-size: 15px;
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    font-size: 16px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .incident-info p {
-  color: #94a3b8;
-  font-size: 12px;
-  margin-bottom: 6px;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 4px;
 }
 
 .time-ago {
-  color: #64748b;
-  font-size: 11px;
+    color: #64748b;
+    font-size: 12px;
 }
 
 .btn-card-action {
-  width: 32px;
-  height: 32px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #94a3b8;
-  text-decoration: none;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    text-decoration: none;
 }
 
-/* --- Map Mockup --- */
 .map-container {
-  height: 100%;
+    height: 100%;
+    min-height: 400px;
 }
 
-.map-mockup {
-  width: 100%;
-  height: 100%;
-  min-height: 320px;
-  background: #070e1b url('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/11/1210/961.png') center/cover;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  overflow: hidden;
+#map {
+    height: 100% !important;
+    min-height: 400px;
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.map-location {
-  position: absolute;
-  color: #64748b;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.label-kawempe { top: 10%; left: 35%; }
-.label-kampala { top: 40%; left: 55%; font-size: 16px; color: #fff; }
-.label-namanve { top: 20%; left: 80%; }
-.label-mengo { top: 55%; left: 45%; }
-.label-makindye { top: 75%; left: 58%; }
-.label-entebbe { top: 85%; left: 10%; }
-
-.map-pin {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  color: white;
-}
-
-.pin-red { background: #ef4444; }
-.pin-orange { background: #f97316; }
-.pin-yellow { background: #eab308; color: black; }
-.pin-blue { background: #3b82f6; }
-.pin-purple { background: #a855f7; }
-
-.map-controls {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.map-controls button {
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
-  width: 28px;
-  height: 28px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* --- Stats Footer Banner --- */
+/* 7. Footer Stats Banner */
 .stats-banner {
-  background: #070e1b;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 30px 0;
+    background: #070e17;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px 0;
 }
 
 .stats-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-/* Make Feature Cards Match the Dark Theme Aesthetic */
-.feature-card {
-    background: #121f30 !important; /* Rich dark blue-black background */
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 24px;
-    color: #ffffff !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.feature-card h3 {
-    color: #ffffff !important;
-    margin-top: 15px;
-    font-size: 18px;
-}
-
-.feature-card p {
-    color: #94a3b8 !important; /* Soft muted text color */
-    font-size: 14px;
-}
-
 
 .stat-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .icon-stat {
-  font-size: 28px;
-  color: #38bdf8;
+    font-size: 24px;
+    color: #38bdf8;
 }
 
 .icon-blue-stat {
-  color: #2563eb;
+    color: #2563eb;
 }
 
 .stat-item h3 {
-  font-size: 20px;
-  font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .stat-item p {
-  color: #64748b;
-  font-size: 12px;
+    color: #64748b;
+    font-size: 13px;
 }
 
-.brand-tag .tagline {
-  color: #94a3b8;
-  font-size: 13px;
-  line-height: 1.2;
-}
-
-/* Responsive adjustments *
-/* Dark theme styling for popup boxes on the map */
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip {
-  background: #0f172a !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px !important;
-}
-
-.leaflet-popup-content h4 {
-  color: #38bdf8;
-  margin-bottom: 4px;
-}
 /* ==========================================
-   SAFE-RESPONSE UGANDA - RESPONSIVE STYLES
+   MEDIA QUERIES - CLEAN RESPONSIVE SCALING
    ========================================== */
 
-/* Base fluid container adjustments */
-img, video {
-    max-width: 100%;
-    height: auto;
-}
-
-/* 1. Navbar Responsiveness */
-@media screen and (max-width: 992px) {
-    .nav-links, .nav-auth {
-        display: none; /* Can be paired with a mobile hamburger menu toggle if desired */
-    }
-    .navbar .nav-container {
-        justify-content: space-between;
-        padding: 0 15px;
-    }
-}
-
-/* 2. Hero Section: Stack Left Content and Right Form */
-@media screen and (max-width: 900px) {
+/* Tablets & Laptops */
+@media screen and (max-width: 1024px) {
     .hero-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 20px;
-        gap: 30px;
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
+
     .hero-text-content {
         text-align: center;
-        max-width: 100%;
     }
+
+    .hero-text-content p {
+        margin: 0 auto 32px auto;
+    }
+
     .hero-buttons {
         justify-content: center;
     }
+
     .raport-card {
-        width: 100%;
-        max-width: 450px;
+        max-width: 550px;
+        margin: 0 auto;
     }
-}
 
-/* 3. Emergency Grid Buttons: Adjust for Smaller Phones */
-@media screen and (max-width: 480px) {
-    .emergency-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
-        gap: 8px;
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .emergency-btn {
-        padding: 10px;
-        font-size: 13px;
-    }
-}
 
-/* 4. Active Incidents & Map Section: Stack Columns on Tablets & Mobile */
-@media screen and (max-width: 992px) {
     .incidents-container {
-        flex-direction: column;
-        gap: 30px;
+        grid-template-columns: 1fr;
     }
-    .incidents-left, .map-container {
-        width: 100%;
-    }
+
     #map {
-        height: 350px !important; /* Slightly more compact map on mobile */
+        height: 380px !important;
     }
 }
 
-/* 5. Footer Stats Banner: Stack on Mobile */
+/* Mobile Devices */
 @media screen and (max-width: 768px) {
+    .nav-links, .nav-auth {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 90px;
+    }
+
+    .hero-text-content h1 {
+        font-size: 32px;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+
     .stats-container {
         flex-direction: column;
         gap: 20px;
-        text-align: center;
+        align-items: flex-start;
     }
-    .stat-item {
-        width: 100%;
+
+    .emergency-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-}
+  }
+  
